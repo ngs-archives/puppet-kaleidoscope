@@ -40,7 +40,7 @@ class kaleidoscope (
     }
   }
 
-  package { 'SourceTree':
+  package { 'Kaleidoscope':
     provider  => 'compressed_app',
     source    => 'http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-2.0.0-107.zip',
   }
