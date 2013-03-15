@@ -42,6 +42,6 @@ class kaleidoscope (
 
   package { 'Kaleidoscope':
     provider  => 'compressed_app',
-    source    => 'http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-2.0.0-107.zip',
+    source    => 'https://updates.blackpixel.com/latest?app=ks',
   }
 }

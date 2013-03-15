@@ -5,7 +5,7 @@ Install [Kaleidoscope](http://kaleidoscopeapp.com) for Mac OS X.
 ## Usage
 
 ```puppet
-include sourcetree
+include kaleidoscope
 ```
 
 ## Required Puppet Modules
