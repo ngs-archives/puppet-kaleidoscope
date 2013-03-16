@@ -5,7 +5,8 @@
 #    include kaleidoscope
 class kaleidoscope (
   $enable_cli = true,
-  $make_default = true
+  $make_default = true,
+  $version = "2.0.1-114"
 ) {
 
   if $enable_cli {
@@ -42,6 +43,6 @@ class kaleidoscope (
 
   package { 'Kaleidoscope':
     provider  => 'compressed_app',
-    source    => 'https://updates.blackpixel.com/latest?app=ks',
+    source    => "http://cdn.kaleidoscopeapp.com/releases/Kaleidoscope-${version}.zip",
   }
 }
