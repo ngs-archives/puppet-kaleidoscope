@@ -6,7 +6,7 @@
 class kaleidoscope (
   $enable_cli = true,
   $make_default = true,
-  $version = "2.0.1-114"
+  $version = '2.0.1-114',
 ) {
 
   if $enable_cli {
@@ -22,22 +22,22 @@ class kaleidoscope (
     include git
 
     # Set diff tool
-    git::config::global { "difftool \"Kaleidoscope\".cmd":
-      value => "ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\""
+    git::config::global { 'difftool "Kaleidoscope".cmd':
+      value => 'ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"',
     }
-    git::config::global { "diff.tool":
-      value => "Kaleidoscope"
+    git::config::global { 'diff.tool':
+      value => 'Kaleidoscope',
     }
 
     # Set merge tool
-    git::config::global { "mergetool \"Kaleidoscope\".cmd":
-      value => "ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot"
+    git::config::global { 'mergetool "Kaleidoscope".cmd':
+      value => 'ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" --snapshot "$REMOTE" --snapshot',
     }
-    git::config::global { "mergetool \"Kaleidoscope\".trustExitCode":
-      value => "true"
+    git::config::global { 'mergetool "Kaleidoscope".trustExitCode':
+      value => 'true',
     }
     git::config::global { "merge.tool":
-      value => "Kaleidoscope"
+      value => 'Kaleidoscope',
     }
   }
 
