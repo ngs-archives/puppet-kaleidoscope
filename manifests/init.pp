@@ -6,7 +6,7 @@
 class kaleidoscope (
   $enable_cli = true,
   $make_default = true,
-  $version = '2.0.2-116',
+  $version = '2.1.0-134',
 ) {
 
   if $enable_cli {
